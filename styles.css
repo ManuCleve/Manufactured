@@ -1,0 +1,127 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-attachment: fixed; /* Fondo fijo para efecto parallax */
+    margin: 0;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* HEADER TRANSLÚCIDO */
+header {
+    width: 60%;
+    margin: 2rem auto 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px 15px 0 0;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+header h1 {
+    position: relative; /* Necesario para posicionar la línea */
+    padding-left: 0.8rem; /* Espacio para la línea */
+    margin-left: 0;
+    font-family: 'Limelight', cursive;
+    font-size: 2.8rem; /* Ajuste sutil de tamaño */
+    letter-spacing: 2px;
+    margin: 0;
+    color: white;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5); /* Sombra tipo pixel art */
+    text-align: left; /* Alineación izquierda */
+    width: fit-content; /* Que ocupe solo el ancho del texto */
+    margin-right: auto; /* Empuja hacia la izquierda */
+}
+
+
+/* Línea vertical estilo "quote" */
+header h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px; /* Grosor de la línea */
+    background: white;
+    border-radius: 2px; /* Bordes redondeados en la línea */
+    box-shadow: 3px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+/* NAVEGACIÓN */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 1.2rem 0 0;
+}
+
+nav li {
+    list-style: none;
+    background: rgba(255, 107, 107, 0.7); /* Rosa translúcido */
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav li:hover {
+    background: rgba(255, 107, 107, 0.9);
+    transform: translateY(-2px);
+}
+
+/* MAIN (CONTENIDO PRINCIPAL) */
+main {
+    width: 60%;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    font-family: 'Limelight', cursive;
+    font-size: 2rem;
+    color: #ff6b6b;
+    margin-top: 0;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+/* SECCIONES INTERNAS */
+.seccion {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header, main {
+        width: 85%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}
