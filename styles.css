@@ -209,6 +209,10 @@ main a:hover {
     color: #ffffff;
 }
 
+footer {
+    text-align: center;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     header, main {
